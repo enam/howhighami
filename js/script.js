@@ -7,10 +7,11 @@ var go = function(){
 	});
 	//The following mutes toner-lite even more when appropriate
 	var bounds = [[-90, -180], [90, 180]];
-	L.rectangle(bounds, {color: "#fff", stroke:false, fillOpacity:0.7}).addTo(map);
+	L.rectangle(bounds, {color: "#fff", stroke:false, fillOpacity:0.7, clickable:false}).addTo(map);
+
 	
 	//add attribution
-	L.control.attribution({position: 'bottomright', prefix: '<a href="http://leafletjs.com/">Leaflet</a>, <a href="http://stamen.com">Stamen</a>, <a href="http://openstreetmap.org">OSM</a>'}).addTo(map);
+	L.control.attribution({position: 'bottomright', prefix: '<a href="http://leafletjs.com/">Leaflet</a>, tiles: <a href="http://stamen.com">Stamen</a>, data: <a href="http://openstreetmap.org">OSM</a>, elevation: <a href="http://beta.usgs.gov/products/products.html?utm_source=Social_Launch&utm_medium=Twitter&utm_campaign=Beta#topic_mapping">USGS</a>'}).addTo(map);
 	
 	//add the header from js include and set title
 	$("body").prepend(headerHTML);
