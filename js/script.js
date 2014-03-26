@@ -20,7 +20,7 @@ var go = function(){
 	//map location bits using leaflet's built in geolocation method. 
 	//http://leafletjs.com/reference.html#map-locate
 	marker.addTo(map);
-	map.on('locationfound',function(e){foundHandler(e)});
+	map.on('locationfound',function(e){foundHandler(e);map.panTo(e.latlng);});
 	map.on('locationerror',function(e){foundError(e)});
 	map.locate({watch:true,enableHighAccuracy:true});
 }
@@ -39,7 +39,7 @@ function foundHandler(location){
 	lat = ll.lat;
 	lng = ll.lng;
 	getEle(lat,lng);if (!marker) marker = L.userMarker(location.latlng).addTo(map);
-    marker.setLatLng(location.latlng);
+    marker.setLatLng(ll);
 }
 function foundError(event){
 	alert(' Well, we aren\'t able to find you, so we don\'t know how high you are. Sorry!' );
