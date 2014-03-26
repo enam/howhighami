@@ -1,0 +1,33 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>howhighami</title><!--title appears in browser tab-->
+  <meta name="description" content="CHANGE THIS"><!--add content text over here-->
+  <meta name="viewport" content="width=device-width">
+  <!--leaflet style sheet, ust grabbing the latest from the cdn. no production here!-->
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+  <!--site style sheet-->
+  <link rel="stylesheet" href="css/style.css">
+  <!--user marker style sheet from https://github.com/heyman/leaflet-usermarker NICE!-->
+  <link rel="stylesheet" href="lib/usermarker/leaflet.usermarker.css">
+</head>
+<body>
+  <div class="eletext"><h3 id="elevation">Trying to figure out how high you are..</h3></div>
+  <!--teh map-->
+  <div id="map"></div>
+  <!--teh codez-->
+  <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+  <script src="include/header.js"></script>
+  <script src="lib/usermarker/leaflet.usermarker.js"></script>
+  <script src="js/script.js"></script>
+  <!--google analytics-->
+  <script>
+    var _gaq=[['_setAccount','UA-32801536-1'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+</body>
+</html>
