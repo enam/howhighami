@@ -26,7 +26,7 @@ var go = function(){
 
 //set vars
 var title = "howhighami"
-,tonerUrl = 'http://tile.stamen.com/toner-lite/{z}/{x}/{y}.png'
+,tonerUrl = 'http://tile.stamen.com/terrain/{z}/{x}/{y}.png'
 ,toner = new L.TileLayer(tonerUrl, {maxZoom: 18, attribution: '', subdomains: ['a1', 'a2', 'a3']})
 ,baseMaps = {
 	"Toner": toner
@@ -53,7 +53,7 @@ function getEle(lat,lng){
 		success:function(data){
 			var eleString = $(data).find("Elevation").text();
 			eleString = eleString.substr(0,eleString.indexOf('.'));
-			$("#elevation").html('Hey! You are <h1>'+addCommas(eleString)+'\' </h1>high. Nice.');
+			$("#elevation").html('Hey! You are <h1>'+addCommas(eleString)+'\'</h1>high. Nice.');
 		}
 	});
 }
